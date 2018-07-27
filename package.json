@@ -16,7 +16,11 @@
         "useBabelrc": true
       }
     },
-    "moduleFileExtensions": ["ts","tsx","js"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
     "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setup/frameworks.ts",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
@@ -38,6 +42,9 @@
     "@types/jest": "^23.3.1",
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
+    "@types/react-redux": "^6.0.5",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
     "babel-plugin-dynamic-import-node": "1.2.0",
     "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-preset-env": "1.7.0",
@@ -51,6 +58,10 @@
     "parcel-bundler": "^1.9.7",
     "parcel-plugin-typescript": "^1.0.0",
     "prettier": "^1.13.7",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "^2.3.0",
     "ts-jest": "^23.0.1",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.9.2",
