@@ -8,17 +8,50 @@
     "build": "parcel build ./src/index.html --public-url '/'",
     "prettify": "prettier --write './src/**/*.{ts,tsx}'",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch --env=node"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true
+      }
+    },
+    "moduleFileExtensions": ["ts","tsx","js"],
+    "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setup/frameworks.ts",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+    ],
+    "testEnvironment": "jest-environment-jsdom-global"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/enzyme": "^3.1.12",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
+    "@types/jest": "^23.3.1",
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
+    "babel-plugin-dynamic-import-node": "1.2.0",
+    "babel-plugin-syntax-dynamic-import": "6.18.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.4.1",
+    "jest-environment-jsdom": "22.4.3",
+    "jest-environment-jsdom-global": "1.0.3",
     "parcel-bundler": "^1.9.7",
     "parcel-plugin-typescript": "^1.0.0",
     "prettier": "^1.13.7",
+    "ts-jest": "^23.0.1",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.9.2",
     "tslint-config-prettier": "^1.14.0",

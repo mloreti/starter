@@ -1,10 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
     "jsx": "react",
-    "experimentalDecorators": true,
-    "lib": ["dom", "es2015"]
+    "lib": ["es2015", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "target": "es5"
   }
 }
