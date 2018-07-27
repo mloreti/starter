@@ -1,10 +1,15 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
+import { ConnectedRouter } from "react-router-redux";
 
 import store from '../../store';
+import { history } from '../../store';
+import Routes from '../Routes';
 
 export default () => (
   <Provider store={store}>
-    <h1>Hello world</h1>
+    <ConnectedRouter history={history}>
+      <Routes />
+    </ConnectedRouter>
   </Provider>
 )

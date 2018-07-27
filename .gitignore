@@ -3,4 +3,6 @@ public/
 dist/
 .cache/
 .vscode/
+.jest/
+coverage/
 yarn-error.log

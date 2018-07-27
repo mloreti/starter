@@ -4,34 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./src/index.html",
+    "start": "parcel ./src/index.html --open",
     "build": "parcel build ./src/index.html --public-url '/'",
     "prettify": "prettier --write './src/**/*.{ts,tsx}'",
-    "test": "jest",
-    "test:watch": "jest --watch --env=node"
-  },
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "useBabelrc": true
-      }
-    },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setup/frameworks.ts",
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    },
-    "testMatch": [
-      "**/__tests__/*.(test|spec).(ts|tsx|js)"
-    ],
-    "testEnvironment": "jest-environment-jsdom-global"
+    "test": "jest --env=node --config config/jest/config.json",
+    "watch": "jest --watch --coverage --env=node --config config/jest/config.json"
   },
   "keywords": [],
   "author": "",
@@ -43,6 +20,7 @@
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
     "@types/react-redux": "^6.0.5",
+    "@types/react-router-redux": "^5.0.15",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
     "babel-plugin-dynamic-import-node": "1.2.0",
@@ -52,6 +30,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
+    "history": "^4.7.2",
     "jest": "^23.4.1",
     "jest-environment-jsdom": "22.4.3",
     "jest-environment-jsdom-global": "1.0.3",
@@ -59,6 +38,7 @@
     "parcel-plugin-typescript": "^1.0.0",
     "prettier": "^1.13.7",
     "react-redux": "^5.0.7",
+    "react-router-redux": "^5.0.0-alpha.9",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-thunk": "^2.3.0",
