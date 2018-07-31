@@ -1,6 +1,7 @@
 # starter
 
-Everything you need to get started.
+Everything you need to get started. 
+
 Includes:
 - React
 - Redux
