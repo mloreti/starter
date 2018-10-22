@@ -7,10 +7,12 @@ import { history } from '../../store';
 import Routes from '../Routes';
 import './App.css';
 
-export default () => (
+const App = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Routes />
     </ConnectedRouter>
   </Provider>
 )
+
+export default App;
